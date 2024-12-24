@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="con1" class="com.java.learning.springexample.bean.Connection" init-method="myInit" destroy-method="myDestroy">
+		<!-- let us set the values of Connection bean properties via Setter Injection through Setter methods--> 
+		<property name="url" value="jdbc:mysql://localhost/eStore"></property>
+		<property name="username" value="john.watson"></property>
+		<property name="password" value="pass123"></property>
+	</bean>
+	
+	<bean id="con2" class="com.java.learning.springexample.bean.Connection">
+		<!-- let us set the values of Connection bean properties via Setter Injection through Setter methods--> 
+		<property name="url" value="jdbc:mysql://localhost/fooddelivery"></property>
+		<property name="username" value="sam.wood"></property>
+		<property name="password" value="sam123"></property>
+	</bean>
+	
+	<bean id="con3" class="com.java.learning.springexample.bean.Connection">
+		<!-- let us set the values of Connection bean properties via Setter Injection through Setter methods--> 
+		<property name="url" value="jdbc:mysql://localhost/healthcart"></property>
+		<property name="username" value="roy.smith"></property>
+		<property name="password" value="roy123"></property>
+	</bean>
+
+</beans>
