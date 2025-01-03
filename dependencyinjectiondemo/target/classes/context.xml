@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="addressRef" class="com.java.learning.dependencyinjectiondemo.bean.Address">
+		<property name="adrsLine" value="2121 Street A"></property>
+		<property name="city" value="ABC"></property>
+		<property name="state" value="XYZ State"></property>
+		<property name="zipCode" value="11011"></property>
+	</bean>
+	
+	<bean id="restaurantRef" class="com.java.learning.dependencyinjectiondemo.bean.Restaurant">
+		<property name="name" value="Johns Cafe"></property>
+		<property name="phone" value="+91 9999911111"></property>
+		<property name="operatingHours" value="10:00 AM - 6:00 PM"></property>
+		<property name="ratings" value="4.5"></property>
+		
+		<!-- IOC Container will use the Setter method in the Restaurant class for setting the
+		Address in it-->
+		<!-- SETTER INJECTION -->
+		<!-- <property name="address" ref="addressRef"></property> -->
+		
+		<!-- IOC Container will use Constructor in the Restaurant class for setting the
+		Address in it-->
+		<!-- CONSTRUCTOR INJECTION -->
+		<constructor-arg ref="addressRef"></constructor-arg>
+	</bean>
+
+</beans>
