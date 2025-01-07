@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Enable annotation-based configuration -->
+    <context:annotation-config />
+
+	<bean id="order"
+		class="com.java.learning.springannotation.bean.Order">
+		<property name="orderId" value="101"></property>
+		<property name="dateTimeStamp" value="6th Jan, 2025, 21:30"></property>
+		<property name="amount" value="2000"></property>
+	</bean>
+
+	<bean id="user"
+		class="com.java.learning.springannotation.bean.User">
+		<property name="name" value="John Watson"></property>
+		<property name="email" value="john.watson@gmail.com"></property>
+
+		<!-- here we are satisfying the dependency using SETTER INJECTION -->
+		<!-- <property name="order" ref="order"></property> -->
+
+		<!-- OR -->
+
+		<!-- here we are satisfying the dependency using CONSTRUCTOR INJECTION -->
+		<!-- <constructor-arg ref="order"></constructor-arg> -->
+	</bean>
+
+
+
+</beans>
