@@ -10,7 +10,7 @@
   		<param-value>/WEB-INF/my-spring-webmvc.xml</param-value>
   	</init-param>
   	<load-on-startup>1</load-on-startup>
-  </servlet
+  </servlet>
 
   <servlet-mapping>
   	<servlet-name>FrontControllerServlet</servlet-name>

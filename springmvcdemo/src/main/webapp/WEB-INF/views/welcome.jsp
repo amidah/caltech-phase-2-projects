@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home</title>
+<title>Welcome</title>
 </head>
 <body>
 	<center>
-		<h3>Welcome to Home for Spring Web MVC</h3>
-		<p><a href="welcome">Welcome</a></p>
+		<h3>Welcometo Spring Web MVC Demo</h3>
+		<p>Date: ${welcomeDateTimeStamp}</p>
 	</center>
 </body>
 </html>
