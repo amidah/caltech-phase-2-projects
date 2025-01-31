@@ -1,0 +1,44 @@
+{
+	"info": {
+		"_postman_id": "dc0b0194-9d23-4c4b-98b5-a3e0c8044af7",
+		"name": "SOAP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27280348"
+	},
+	"item": [
+		{
+			"name": "SOAP Req",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "text/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<soapenv:Envelope xmlns:soapenv=\"http://schemas.xmlsoap.org/soap/envelope/\"\n\t\t\t\t  xmlns:gs=\"http://spring.io/guides/gs-producing-web-service\">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <gs:getCountryRequest>\n         <gs:name>United Kingdom</gs:name>\n      </gs:getCountryRequest>\n   </soapenv:Body>\n</soapenv:Envelope>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/ws",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"ws"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
